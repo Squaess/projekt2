@@ -1,0 +1,10 @@
+.rel-img img {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.bottom-center {
+  left: 50%;
+  bottom: 45%;
+  transform: translate(-50%, 45%);
+}
