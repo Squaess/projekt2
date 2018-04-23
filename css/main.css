@@ -5,10 +5,11 @@ body {
 
 #container {
   font-family: 'Lato', sans-serif;
-  color: #DDDDDD;
   margin: 0.5em 1em 1em;
+  color: #DDDDDD;
 }
 
+/*
 a {
   text-decoration: none;
 }
@@ -20,11 +21,13 @@ a:link {
 a:visited {
   color: rgb(67,65,95);
 }
-
+*/
 .rel-img {
   position: relative;
   text-align: center;
+  margin-bottom: 1em;
 }
+
 
 .rel-img img {
   width: 100%;
@@ -32,18 +35,12 @@ a:visited {
   opacity: 0.60;
 }
 
-.rel-img h1 {
-    font-size: 1.6em;
-    margin-bottom: 0.3em;
-}
-.rel-img h2 { font-size: 1em;}
-
 .bottom-center {
   position: absolute;
   width: 80%;
-  left: 50%;
   bottom: 10%;
-  transform: translate(-50%, 10%);
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
 
 .square ol {
@@ -60,14 +57,14 @@ a:visited {
   font-size: 1.2em;
 }
 
-.row:after {
-  content: "";
-  clear: both;
-  display: table;
-}
+#main-info {text-align: justify; margin-bottom: 24px;}
 
-#main-info p { margin: 0.55em 1em 2em;}
-#main-info { text-align: justify;}
+hr {
+  display: block;
+  border: 0;
+  height: 1px;
+  border-top: 1px solid #DDDDDD;
+}
 
 @media screen and (min-width: 930px) {
 
@@ -79,22 +76,17 @@ a:visited {
   .rel-img img {
     float: left;
     border-radius: 10%;
-    width: 30%;
-    max-width: 380px;
+    width: 40%;
     height: auto;
     opacity: 1.0;
-    margin-right: 2em;
+    margin-right: 2%;
   }
 
   .bottom-center {
-    position: static;
-    width: 80%;
-    left: 0%;
-    bottom: 0%;
+    position: static;    
     transform: translate(0,0);
-    margin-bottom: 0.5em;
   }
-
+/*
   .bottom-center h1 {
     margin-bottom: 0.3em;
   }
@@ -103,11 +95,12 @@ a:visited {
     margin-top: 0.3em;
     margin-bottom: 0.4em;
   }
+  */
 
   #main-info {
-    text-align: justify;
+    width: 70%;
   }
-
+  /*
   #main-info p {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
@@ -117,12 +110,13 @@ a:visited {
   #main-info p+p {
     margin-top: 0.2em;
   }
-
+*/
   #main-info:after {
     content: "";
     clear: both;
     display: table;
   }
+
 
 }
 

@@ -20,6 +20,7 @@ echo $P->PageHeader();
   <p>Na tej stronie zamieszczę krótkie informacje dotyczące
   mojego życiorysu oraz przygód z edukacją. Można również tutaj znaleźć
   informacje na temat moich ulubionych zajęć.</p>
+  <hr/>
   <p>Szkołę średnią skończyłem w 2015 roku w Olesnie, małej miejscowości
      w województwie Opolskim. Również w 2015 roku zacząłem studia na wydziale
      Podstawowych Problemów Techniki Politechniki Wrocławskiej
@@ -43,6 +44,16 @@ echo $P->PageHeader();
 
   <div class="square col-2-4">
     <h4>Moje hobby</h4>
+    <ol>
+      <li><a href="sub_sites/muzyka.html">Muzyka</a></li>
+      <li><a href="sub_sites/e-sport.html">E-sport</a></li>
+      <li><a href="sub_sites/ksiazki.html">Książki</a></li>
+    </ol>
+    <ol>
+      <li><a href="sub_sites/muzyka.html">Muzyka</a></li>
+      <li><a href="sub_sites/e-sport.html">E-sport</a></li>
+      <li><a href="sub_sites/ksiazki.html">Książki</a></li>
+    </ol>
     <ol>
       <li><a href="sub_sites/muzyka.html">Muzyka</a></li>
       <li><a href="sub_sites/e-sport.html">E-sport</a></li>
