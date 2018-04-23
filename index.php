@@ -14,6 +14,8 @@ $P -> SetRelImage("img/img_avatar_big.jpg","Bartosz Banasik", "Moje przygody z e
 
 echo $P->Begin();
 
+echo $P->Menu();
+
 echo $P->PageHeader();
 ?>
 <div id="main-info">
@@ -44,16 +46,6 @@ echo $P->PageHeader();
 
   <div class="square col-2-4">
     <h4>Moje hobby</h4>
-    <ol>
-      <li><a href="sub_sites/muzyka.html">Muzyka</a></li>
-      <li><a href="sub_sites/e-sport.html">E-sport</a></li>
-      <li><a href="sub_sites/ksiazki.html">Książki</a></li>
-    </ol>
-    <ol>
-      <li><a href="sub_sites/muzyka.html">Muzyka</a></li>
-      <li><a href="sub_sites/e-sport.html">E-sport</a></li>
-      <li><a href="sub_sites/ksiazki.html">Książki</a></li>
-    </ol>
     <ol>
       <li><a href="sub_sites/muzyka.html">Muzyka</a></li>
       <li><a href="sub_sites/e-sport.html">E-sport</a></li>

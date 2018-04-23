@@ -9,6 +9,28 @@ body {
   color: #DDDDDD;
 }
 
+.active {
+  color: rgb(217,8,102);
+}
+
+.topnav a:not(:last-child) {display: none;}
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
 /*
 a {
   text-decoration: none;
@@ -76,41 +98,21 @@ hr {
   .rel-img img {
     float: left;
     border-radius: 10%;
-    width: 40%;
+    width: 46%;
     height: auto;
     opacity: 1.0;
-    margin-right: 2%;
+    margin-right: 2em;
   }
 
   .bottom-center {
-    position: static;    
+    position: static;
     transform: translate(0,0);
   }
-/*
+
   .bottom-center h1 {
-    margin-bottom: 0.3em;
+    margin-top: 1em;
   }
 
-  .bottom-center h2 {
-    margin-top: 0.3em;
-    margin-bottom: 0.4em;
-  }
-  */
-
-  #main-info {
-    width: 70%;
-  }
-  /*
-  #main-info p {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-    font-size: 0.9em;
-  }
-
-  #main-info p+p {
-    margin-top: 0.2em;
-  }
-*/
   #main-info:after {
     content: "";
     clear: both;

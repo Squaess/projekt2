@@ -18,6 +18,25 @@ $HEADER =<<<EOT
 <div id="container">
 EOT;
 
+$MAIN_MENU = <<<EOT
+<div class="topnav" id="mainmenu">
+  <a href="/projekt2/index.php" class="active">Strona główna</a>
+  <a href="/projekt2/sub_sites/semestr1.php"> Semestr I</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("mainmenu");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+EOT;
+
+
 $PAGE_HEADER =<<<EOT
 <div class="rel-img">
 
@@ -122,7 +141,7 @@ class MyPage {
 
   public function __construct($title = "", $root="") {
     $this->title = $title;
-    $this->root  = $root;    
+    $this->root  = $root;
   }
 
   /**
@@ -185,6 +204,10 @@ class MyPage {
     return $FOOTER;
   }
 
+  public function Menu() {
+    global $MAIN_MENU;
+    return $MAIN_MENU;
+  }
 } //class MyPage
 
 ?>
