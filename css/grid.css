@@ -17,6 +17,11 @@
   .col-2-4{width : 49.0%;}
   .col-3-4{width : 64.5%;}
   .col-4-4{width : 100.%;}
+  .col-1-5{width : 18.4%;}
+  .col-2-5{width : 38.8%;}
+  .col-3-5{width : 59.2%;}
+  .col-4-5{width : 79.6%;}
+  .col-5-5{width : 100.%;}
   [class*='col-']:last-of-type{margin-right:0}
   .row+.row { margin-top: 0.5em;}
 }
@@ -24,11 +29,7 @@
 html {height: 100%;}
 body {line-height: 1.5;}
 
-h1{font-size: 3.33em; line-height: 1.351; margin-bottom: 0.45em}
-h2{font-size: 2.618em; line-height: 1.146; margin-bottom: 0.573em}
-h3{font-size: 2.058em; line-height: 1.458; margin-bottom: 0.729em}
-h4{font-size: 1.618em; line-height: 1.854; margin-bottom: 0.927em}
-h5{font-size: 1.272em; line-height: 1.179; margin-bottom: 1.179em}
-h6{font-size: 1.em; line-height: 1.5; margin-bottom: 1.5em}
+h1, h2, h3, h4, h5, h6 {font-weight:bold;}
 
-h1, h2, h3, h4, h5, h6 {font-weight:bold;margin-bottom:24px;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.4em;}

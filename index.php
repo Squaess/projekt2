@@ -14,12 +14,15 @@ $P -> SetRelImage("img/img_avatar_big.jpg","Bartosz Banasik", "Moje przygody z e
 
 echo $P->Begin();
 
+echo $P->Menu();
+
 echo $P->PageHeader();
 ?>
 <div id="main-info">
   <p>Na tej stronie zamieszczę krótkie informacje dotyczące
   mojego życiorysu oraz przygód z edukacją. Można również tutaj znaleźć
   informacje na temat moich ulubionych zajęć.</p>
+  <hr/>
   <p>Szkołę średnią skończyłem w 2015 roku w Olesnie, małej miejscowości
      w województwie Opolskim. Również w 2015 roku zacząłem studia na wydziale
      Podstawowych Problemów Techniki Politechniki Wrocławskiej
