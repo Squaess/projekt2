@@ -22,28 +22,31 @@ EOT;
 $MAIN_MENU_TMPL =<<<EOT
 <div id="myTopnav" class="topnav">
     {{ACTIVE}}
-    <span class="active">Home</span>
+    {{M1}}
     <span onclick="showSubList('edu')" class="subspan">Moja Edukacja</span>
     <ul class="sublist" id="edu">
-        <li><a href="#">Liceum</a></li>
-        <li><a href="#">Semestr1</a></li>
-        <li><a href="#">Semestr2</a></li>
-        <li><a href="#">Semestr3</a></li>
-        <li><a href="#">Semestr4</a></li>
+        {{M2.1}}
+        {{M2.2}}
+        {{M2.3}}
+        {{M2.4}}
+        {{M2.5}}
+        {{M2.6}}
     </ul>
     <span onclick="showSubList('hobby')" class="subspan">Moje Hobby</span>
     <ul class="sublist" id="hobby">
-        <li><a href="#">Muzyka</a></li>
-        <li><a href="#">E-sport</a></li>
-        <li><a href="#">Książki</a></li>
+        {{M3.1}}
+        {{M3.2}}
+        {{M3.3}}
     </ul>
     <span class="icon" onclick="myFunction()">☰</span>
 </div><!-- topnav -->
 EOT;
+$MAIN_MENU_LI_2 = '<span class="active">{{T}}</span>';
+$MAIN_MENU_LI_1 = '<li><a href="{{H}}">{{T}}</a></li>';
 
 $MAIN_MENU_ITEMS = [
   "M1"   => ["Strona głowna","index.php"],
-  "M2.1"   => ["Moje Liceum", "kadra.php"],
+  "M2.1"   => ["Moje Liceum", "http://lo.olesno.pl/"],
   "M2.2"   => ["Semestr I", "semestr1.php"],
   "M2.3"   => ["Semestr II", "semstr2.php"],
   "M2.4"   => ["Semestr III", "semstr3.php"],
@@ -213,6 +216,42 @@ class MyPage {
     global $PAGE_HEADER;
     return $PAGE_HEADER;
   }
+
+  public function Menu($active_name){
+    global $MAIN_MENU_TMPL, $MAIN_MENU_ITEMS, $MAIN_MENU_LI_1, $MAIN_MENU_LI_2;
+
+    $s = $MAIN_MENU_TMPL;
+
+    $help = $MAIN_MENU_LI_2;
+    $help = (string) str_replace("{{T}}", $active_name, $help);
+    $s = (string) str_replace("{{ACTIVE}}", $help, $s);
+
+    $pref = "";
+    if($active_name === 'Strona główna') {
+      $pref .= "sub_sites/";
+    }
+
+    foreach ($MAIN_MENU_ITEMS as $key => $array) {
+      $mkey = "{{" . $key . "}}";
+      if($key === "M1") {
+        $item = '<span class="subspan" onclick=redir("{{H}}")>{{T}}</span>';
+        $prefix2 = "../";
+        if($active_name === 'Strona główna') {
+          $prefix2 = "";
+        }
+        $item = (string) str_replace(["{{T}}","{{H}}"], [$array[0], $prefix2.$array[1]], $item);
+      } else {
+        $item = ($array[0] === $active_name)?$MAIN_MENU_LI_2:$MAIN_MENU_LI_1;
+        $item = (string) str_replace(["{{T}}","{{H}}"], [$array[0], $pref.$array[1]], $item);
+      }
+
+      $s = (string) str_replace($mkey, $item, $s);
+    }
+
+    return $s;
+
+  }
+
   /**
   * Zwraca lancuch z zamknieciem strony
   * @return string

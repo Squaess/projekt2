@@ -14,6 +14,7 @@ $P -> AddFont('https://fonts.googleapis.com/css?family=Lato');
 $P -> SetRelImage("../img/semestr_img.jpg","Studia", "Semest I");
 
 echo $P->Begin();
+echo $P->Menu('Semestr I');
 echo $P ->PageHeader();
 
  ?>

@@ -23,3 +23,7 @@ function showSubList(className) {
     var x = document.getElementById(className);
     x.style.display = x.style.display === "block" ? "none":"block";
 }
+
+function redir(location) {
+  window.location.href = location;
+}

@@ -14,7 +14,7 @@ $P -> SetRelImage("img/img_avatar_big.jpg","Bartosz Banasik", "Moje przygody z e
 
 echo $P->Begin();
 
-echo $P->Menu();
+echo $P->Menu('Strona główna');
 
 echo $P->PageHeader();
 ?>

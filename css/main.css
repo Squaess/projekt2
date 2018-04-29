@@ -82,7 +82,7 @@ a {
     position: relative;
 }
 
-.active {
+#myTopnav .active {
     font-weight: bold;
     background-color: #D90866;
     color: white;
