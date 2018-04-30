@@ -48,8 +48,8 @@ $MAIN_MENU_ITEMS = [
   "M1"   => ["Strona głowna","index.php"],
   "M2.1"   => ["Moje Liceum", "http://lo.olesno.pl/"],
   "M2.2"   => ["Semestr I", "semestr1.php"],
-  "M2.3"   => ["Semestr II", "semstr2.php"],
-  "M2.4"   => ["Semestr III", "semstr3.php"],
+  "M2.3"   => ["Semestr II", "semestr2.php"],
+  "M2.4"   => ["Semestr III", "semestr3.php"],
   "M2.5"   => ["Semestr IV", "semestr4.php"],
   "M2.6"   => ["Semestr V", "semestr5.php"],
   "M3.1" => ["Muzyka", "muzyka.php"],
@@ -250,6 +250,32 @@ class MyPage {
 
     return $s;
 
+  }
+
+  public function Section($title, $list1, $list2){
+    $s = '<div class="row">'."\n";
+    $s .= '<h3>'.$title.'</h3>'."\n";
+    $s .= '<div class="square col-2-4">'."\n";
+    $s .= '<h4>Czego się dowiedziałem?</h4>'."\n";
+    $s .= "<ol>"."\n";
+    foreach ($list1 as $key => $value) {
+      $s .= "<li>".$value."</li>\n";
+    }
+    $s .= "</ol>\n";
+    $s .= "</div><!-- col -->\n";
+
+    $s .= '<div class="square col-2-4">'."\n";
+    $s .= '<h4>Czego warto się douczyć?</h4>'."\n";
+    $s .= "<ol>"."\n";
+    foreach ($list2 as $key => $value) {
+      $s .= "<li>".$value."</li>\n";
+    }
+    $s .= "</ol>\n";
+    $s .= "</div><!-- col -->\n";
+
+    $s .= '</div>'."<!-- row -->\n";
+
+    return $s;
   }
 
   /**

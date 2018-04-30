@@ -11,105 +11,75 @@ $P->AddCSS("semestr1.css");
 $P -> SetDescription($OPIS);
 $P -> AddFont('https://fonts.googleapis.com/css?family=Lato');
 
-$P -> SetRelImage("../img/semestr_img.jpg","Studia", "Semest I");
+$P -> SetRelImage("../img/semestr_img.jpg","Studia", "Semestr I");
 
 echo $P->Begin();
 echo $P->Menu('Semestr I');
 echo $P ->PageHeader();
 
- ?>
+$title = "Analiza Matematyczna I";
+$list1 = [
+          "Znam pojęcie ciągu granicy i pojęcie zbiezności szeregu",
+          "Dowiedziałem się czym jest ciągłość funkcji",
+          "Wiem czym jest pochodna funkcji",
+          "Znam pojęcie całki Riemana"
+          ];
 
- <div class="row">
-   <h3>Analiza Matematyczna I</h3>
-   <div class="square col-2-4">
-     <h4>Czego się dowiedziałem?</h4>
-     <ol>
-       <li>Znam pojęcie ciągu granicy i pojęcie zbiezności szeregu</li>
-       <li>Dowiedziałem się czym jest ciągłość funkcji</li>
-       <li>Wiem czym jest pochodna funkcji</li>
-       <li>Znam pojęcie całki Riemana</li>
-   </ol>
-   </div><!-- col -->
+$list2 = [
+          "Poprawić swoje umiejętności w liczeniu całek dwóch zmiennych",
+          "Budować wizualizację analizowanych zagadnień analitycznych"
+          ];
 
-   <div class="square col-2-4">
-     <h4>Czego warto się douczyć?</h4>
-     <ol>
-       <li>Poprawić swoje umiejętności w liczeniu całek dwóch zmiennych</li>
-       <li>Budować wizualizację analizowanych zagadnień analitycznych</li>
-    </ol>
-   </div><!-- col -->
+echo $P -> Section($title, $list1, $list2);
 
- </div> <!-- row -->
+$title = "Algebra z Geometrią Analityczną";
+$list1 = [
+          "Wiele ciekawych rzeczy na temat grup",
+          "Wiele ciekawych rzeczy na temat ciał",
+          "Własności podstawowe algebry, algebry liniowej",
+          "Podstawy odnośnie liczb zepolonych"
+          ];
 
- <div class="row">
-   <h3>Algebra z Geometrią Analityczną</h3>
-   <div class="square col-2-4">
-     <h4>Czego się dowiedziałem?</h4>
-     <ol>
-       <li>Wielie ciekawych rzeczy na temat grup</li>
-       <li>Wielie ciekawych rzeczy na temat ciał</li>
-       <li>Własności podstawowe algebry, algebry liniowej</li>
-       <li>Podstawy odnośnie liczb zepolonych</li>
-   </ol>
-   </div><!-- col -->
+$list2 = [
+          "Powtórzyć pojęcie baz",
+          "Powtórzyć pojęcie podprzestrzeni",
+          "Ortogonalizacje Grama-Schmidta",
+          "Wyznaczanie rzutu ortogonalnego na podprzestrzeń liniowa"
+          ];
 
-   <div class="square col-2-4">
-     <h4>Czego warto się douczyć?</h4>
-     <ol>
-       <li>Powtórzyć pojęcie baz</li>
-       <li>Powtórzyć pojęcie podprzestrzeni</li>
-       <li>Ortogonalizacje Grama-Schmidta</li>
-       <li>Wyznaczanie rzutu ortogonalnego na podprzestrzeń liniowa</li>
-   </ol>
-   </div><!-- col -->
-
- </div> <!-- row -->
- <div class="row">
-   <h3>Logika i Struktury Formalne</h3>
-   <div class="square col-2-4">
-     <h4>Czego się dowiedziałem?</h4>
-     <ol>
-       <li>Co to jest tautologia</li>
-       <li>Jak interpretować kwantyfikatory</li>
-       <li>Podstawowe warianty indukcji matematycznej</li>
-       <li>Pojęcie dobrego porządku</li>
-       <li>Dużo o nieskończoności</li>
-   </ol>
-   </div><!-- col -->
-
-   <div class="square col-2-4">
-     <h4>Czego warto się douczyć?</h4>
-     <ol>
-       <li>Wykorzystania dobrego uporządkowania zbioru</li>
-   </ol>
-   </div><!-- col -->
-
- </div> <!-- row -->
-
- <div class="row">
-   <h3>Wstęp do Informatyki i Programowania</h3>
-   <div class="square col-2-4">
-     <h4>Czego się dowiedziałem?</h4>
-     <ol>
-       <li>Czym jest rekurencja</li>
-       <li>Czym jest iteracja</li>
-       <li>Obiliczenia na stosie</li>
-       <li>Wyrażenia regularne</li>
-   </ol>
-   </div><!-- col -->
-
-   <div class="square col-2-4">
-     <h4>Czego warto się douczyć?</h4>
-     <ol>
-       <li>Podstaw języka C od środka</li>
-       <li>Jaka jest ideologia języka </li>
-   </ol>
-   </div><!-- col -->
-
- </div> <!-- row -->
+echo $P -> Section($title, $list1, $list2);
 
 
-<?php
-$P -> End();
+$title = "Logika i Struktury Formalne";
+$list1 = [
+          "Co to jest tautologia",
+          "Jak interpretować kwantyfikatory",
+          "Podstawowe warianty indukcji matematycznej",
+          "Pojęcie dobrego porządku",
+          "Dużo o nieskończoności"
+          ];
+
+$list2 = [
+          "Wykorzystania dobrego uporządkowania zbioru"
+          ];
+
+echo $P -> Section($title, $list1, $list2);
+
+$title = "Wstęp do Informatyki i Programowania";
+$list1 = [
+          "Czym jest rekurencja",
+          "Czym jest iteracja",
+          "Obiliczenia na stosie",
+          "Wyrażenia regularne"
+          ];
+
+$list2 = [
+          "Podstaw języka C od środka",
+          "Jaka jest ideologia języka"
+          ];
+
+echo $P -> Section($title, $list1, $list2);
+
+echo $P -> End();
 
  ?>
