@@ -1,35 +1,23 @@
-<!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="utf-8">
-    <title>Moje przygody z edukacją</title>
-    <meta name="description" content="Projekt realizujący na zaliczenie przedmiotu.">
-    <meta name="author" content="Bartosz Banasik">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<?php
+require_once("../PHP/myPage.php");
 
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/muzyka.css">
-    <link rel="stylesheet" href="../css/ksiazka.css">
+$OPIS = "Projekt realizujący na zaliczenie przedmiotu.";
+$P = new MyPage("Moje przygody z edukacją","../");
+$P->AddCSS("reset.css");
+$P->AddCSS("grid.css");
+$P->AddCSS("main.css");
+$P->AddCSS("muzyka.css");
+$P->AddCSS("ksiazka.css");
+$P -> SetDescription($OPIS);
+$P -> AddFont('https://fonts.googleapis.com/css?family=Lato');
 
-  </head>
-  <body>
+$P -> SetRelImage("../img/ksiazka.jpeg","Moje Hobby", "Książki");
 
-    <div id="container">
+echo $P->Begin();
+echo $P->Menu('Książki');
+echo $P ->PageHeader();
 
-      <div class="rel-img">
-
-       <img src="../img/ksiazka.jpeg" alt="Zdjęcie">
-
-        <div class="bottom-center">
-          <h1>Moje Hobby</h1>
-          <h3>Książki</h3>
-        </div>
-
-      </div> <!-- rel-img -->
-
-
-
+ ?>
       <div class="row">
 
         <div class="col-4-4">
@@ -45,7 +33,7 @@
 
         <div class="col-2-4 square">
           <h4>Ulubione książki</h4>
-          <ul>
+          <ol>
             <li>Ani słowa prawdy - Jacek Piekara</li>
             <li>Alicja - Jacek Piekara</li>
             <li>Pan Lodowego Ogrodu - Jarosław Grzędowicz</li>
@@ -56,21 +44,20 @@
             <li>Morfina - Szczepan Twardoch</li>
             <li>Drach - Szczepan Twardoch</li>
             <li>Saga Wiedźmin - Andrzej Sapkowski</li>
-          </ul>
+          </ol>
         </div><!-- col -->
 
         <div class="col-2-4 square">
           <h4>Ksiązki do przeczytania</h4>
-          <ul>
+          <ol>
             <li>Folwark Zwierzęcy - George Orwell</li>
             <li>Metro 2033 - Dmitrij Głuchowski</li>
             <li>Kobiety- Charles Bukowski</li>
-          </ul>
+          </ol>
         </div><!-- col -->
 
       </div><!-- row -->
 
-    </div> <!-- container -->
-
-  </body>
-</html>
+<?php
+echo $P->End();
+ ?>

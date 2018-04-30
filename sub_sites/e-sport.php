@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="utf-8">
-    <title>Moje przygody z edukacją</title>
-    <meta name="description" content="Projekt realizujący na zaliczenie przedmiotu.">
-    <meta name="author" content="Bartosz Banasik">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<?php
+require_once("../PHP/myPage.php");
 
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/e-sport.css">
-    <script type="text/javascript" src="../scripts/export.js">
+$OPIS = "Projekt realizujący na zaliczenie przedmiotu.";
+$P = new MyPage("Moje przygody z edukacją","../");
+$P->AddCSS("reset.css");
+$P->AddCSS("grid.css");
+$P->AddCSS("main.css");
+$P->AddCSS("muzyka.css");
+$P->AddCSS("e-sport.css");
+$P -> SetDescription($OPIS);
+$P -> AddFont('https://fonts.googleapis.com/css?family=Lato');
 
-    </script>
+$P -> SetRelImage("../img/iem.png","Moje Hobby", "E-SPORT");
 
-  </head>
-  <body>
+echo $P->Begin();
+echo $P->Menu('E-sport');
+echo $P ->PageHeader();
 
-    <div id="container">
-
-      <div class="rel-img">
-
-       <img src="../img/iem.png" alt="Zdjęcie">
-
-        <div class="bottom-center">
-          <h1>Moje Hobby</h1>
-          <h3>E-SPORT</h3>
-        </div>
-
-      </div> <!-- rel-img -->
+ ?>
 
       <div class="row">
         <div class="col-4-4">
@@ -115,7 +104,6 @@
         </div><!-- col -->
       </div><!-- row -->
 
-    </div> <!-- container -->
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -124,5 +112,7 @@
         <div id="caption"></div>
     </div>
 
-  </body>
-</html>
+
+<?php
+echo $P->End();
+ ?>

@@ -3,24 +3,6 @@ body {
   background-color:#000;
 }
 
-#container {
-  font-family: 'Lato', sans-serif;
-  color: #DDDDDD;
-  width: 100%;
-  margin: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:link {
-  color: rgb(217,8,102);
-}
-
-a:visited {
-  color: rgb(67,65,95);
-}
 
 .rel-img {
   position: relative;
@@ -44,21 +26,11 @@ a:visited {
   transform: translate(-50%, 20%);
 }
 
-[class*='col-'] {
-  text-align: justify;
-}
-
 iframe {
   display: block;
   width: 90%;
   height: 20em;
   margin: auto;
-}
-
-p {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 1em;
 }
 
 .square h4 {
