@@ -6,7 +6,7 @@ body {
 #container {
   font-family: 'Lato', sans-serif;
   color: #DDDDDD;
-  margin: 0.5em 1em 1em;  
+  margin: 0.5em 1em 1em;
 }
 
 a {
@@ -133,7 +133,7 @@ a {
 @media screen and (min-width: 930px) {
 
   .rel-img {
-    position: static;
+    position: relative;
     text-align: left;
   }
 
@@ -185,6 +185,33 @@ a {
     display: table;
   }
 
+  /*  for navigation menu bar */
+  #myTopnav .dropdown,
+  #myTopnav .subspan,
+  #myTopnav .active {
+    float: left;
+    text-align: center;
+    display: inline-block;
+  }
+
+  #myTopnav .icon {display: none;}
+
+  #myTopnav .dropdown {
+    position: relative;
+  }
+
+  #myTopnav .sublist {
+    width: 100%;
+    top: 20px;
+  }
+
+  #myTopnav {
+    width: auto;
+  }
+
+  .active {
+    margin-left: 160px;
+  }
 }
 
 @media screen and (min-width: 1000px) {

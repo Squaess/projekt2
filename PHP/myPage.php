@@ -20,24 +20,29 @@ EOT;
 
 
 $MAIN_MENU_TMPL =<<<EOT
-<div id="myTopnav" class="topnav">
+<div id="myTopnav" class="topnav">  
     {{ACTIVE}}
     {{M1}}
-    <span onclick="showSubList('edu')" class="subspan">Moja Edukacja</span>
-    <ul class="sublist" id="edu">
-        {{M2.1}}
-        {{M2.2}}
-        {{M2.3}}
-        {{M2.4}}
-        {{M2.5}}
-        {{M2.6}}
-    </ul>
-    <span onclick="showSubList('hobby')" class="subspan">Moje Hobby</span>
-    <ul class="sublist" id="hobby">
-        {{M3.1}}
-        {{M3.2}}
-        {{M3.3}}
-    </ul>
+
+    <div class="dropdown">
+      <span onclick="showSubList('edu')" class="subspan">Moja Edukacja</span>
+      <ul class="sublist" id="edu">
+          {{M2.1}}
+          {{M2.2}}
+          {{M2.3}}
+          {{M2.4}}
+          {{M2.5}}
+          {{M2.6}}
+      </ul>
+    </div>
+    <div class="dropdown">
+      <span onclick="showSubList('hobby')" class="subspan">Moje Hobby</span>
+      <ul class="sublist" id="hobby">
+          {{M3.1}}
+          {{M3.2}}
+          {{M3.3}}
+      </ul>
+    </div>
     <span class="icon" onclick="myFunction()">☰</span>
 </div><!-- topnav -->
 EOT;
@@ -234,12 +239,15 @@ class MyPage {
     foreach ($MAIN_MENU_ITEMS as $key => $array) {
       $mkey = "{{" . $key . "}}";
       if($key === "M1") {
-        $item = '<span class="subspan" onclick=redir("{{H}}")>{{T}}</span>';
+        $item = '<span class="subspan" onclick="redir(\'{{H}}\')">{{T}}</span>';
         $prefix2 = "../";
         if($active_name === 'Strona główna') {
           $prefix2 = "";
         }
         $item = (string) str_replace(["{{T}}","{{H}}"], [$array[0], $prefix2.$array[1]], $item);
+      } else if ($key === "M2.1") {
+        $item = ($array[0] === $active_name)?$MAIN_MENU_LI_2:$MAIN_MENU_LI_1;
+        $item = (string) str_replace(["{{T}}","{{H}}"], [$array[0], $array[1]], $item);
       } else {
         $item = ($array[0] === $active_name)?$MAIN_MENU_LI_2:$MAIN_MENU_LI_1;
         $item = (string) str_replace(["{{T}}","{{H}}"], [$array[0], $pref.$array[1]], $item);
