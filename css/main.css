@@ -201,17 +201,32 @@ a {
   }
 
   #myTopnav .sublist {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    /*min-width: 160px;    */
+    z-index: 1;
     width: 100%;
-    top: 20px;
+    top: 100%;
   }
 
   #myTopnav {
+    overflow: visible;
     width: auto;
+    background: #D90866;
   }
 
-  .active {
-    margin-left: 160px;
+  #myTopnav:after {
+    clear: both;
+    content: "";
+    display: table;
   }
+
+  .sublist .active {
+    margin-left: 0;
+    width: 100%;
+  }
+
 }
 
 @media screen and (min-width: 1000px) {

@@ -22,6 +22,13 @@ function showSubList(className) {
     console.log(className);
     var x = document.getElementById(className);
     x.style.display = x.style.display === "block" ? "none":"block";
+    if( className === 'edu') {
+      var y = document.getElementById('hobby');
+      y.style.display = y.style.display === "block" ? "none":"none";
+    } else {
+      var y = document.getElementById('edu');
+      y.style.display = y.style.display === "block" ? "none":"none";
+    }
 }
 
 function redir(location) {
